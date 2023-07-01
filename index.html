@@ -33,7 +33,7 @@
 				var currentresultingurl = currentprefix + query.replace(/ /g, currentdelimitor) + currentsufix;
 
 				// var outstring = outstring + '<br><a>'+currentresultingurl+'<a><br><iframe src="'+currentresultingurl+'"" style="width: 100%; height: 250px;"></iframe>';
-				var outstring = outstring + '<div style="display:inline-block;width: 100%; height: 100%;overflow: auto;"><button onclick="window.open("'+currentresultingurl+'", target="blank")" style="padding: 4px;border: 1px solid #303030; border-radius: 5px;background: orange;">Visit</button><iframe src="'+currentresultingurl+'"" style="width: 100%; height: 100%;" loading="lazy"></iframe></div>';
+				var outstring = outstring + '<div style="display:inline-block;width: 100%; height: 100%;overflow: auto;"><button onclick="window.open("'+currentresultingurl+'", target="blank")" style="padding: 4px;border: 1px solid #303030; border-radius: 5px;background: orange;">Visit</button><br><iframe src="'+currentresultingurl+'"" style="width: 100%; height: 100%;" loading="lazy"></iframe></div>';
 			}
 			document.getElementById('tabframes').innerHTML = outstring;
 		}
