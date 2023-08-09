@@ -37,9 +37,20 @@
 			}
 			document.getElementById('tabframes').innerHTML = outstring;
 		}
+		function preprocess() {
+			console.log(window.location.href);
+			var url = window.location.href;
+			var url = url.toLowerCase();
+			if (url.indexOf('search=') > -1) {
+				var keywords = url.split('search=')[1].split('&')[0].replace(/\+/g, ' ');
+				console.log("["+keywords+"]");
+				document.getElementById('inputquery').value = keywords;
+				updateURL('inputquery');
+			}
+		}
 	</script>
 </head>
-<body>
+<body onload="preprocess()>
 	<a href="/"><h2 style="display: inline-block;">Void</h2><h2 style="color: orange;display: inline-block;">Hub</h2></a>
 	
 	<input type="text" id="inputquery" style="width: 50%;border: 1px solid #303030; border-radius: 5px;padding: 4px;" onchange="updateURL('inputquery')"/>
